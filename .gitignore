@@ -1,0 +1,28 @@
+# Eclipse
+FarmVerse/.metadata/
+FarmVerse/.settings/
+FarmVerse/.classpath
+FarmVerse/.project
+
+# Spring Boot secrets
+FarmVerse/**/application.properties
+
+# Java build
+FarmVerse/**/target/
+FarmVerse/**/bin/
+*.class
+
+# React
+farm-verse-front/node_modules/
+farm-verse-front/build/
+farm-verse-front/dist/
+
+# Environment / secrets
+.env
+.env.*
+*.zip
+*.rar
+
+# OS
+.DS_Store
+Thumbs.db
