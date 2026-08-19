@@ -3,9 +3,9 @@ package edu.infosys.farmVerseApplication.bean;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-@Entity
-public class CropInputs {
-	@Id
+
+public class CropExpense {
+	
 	private String cropId;
 	private Double waterGallon;
 	private Double fertilizer;
@@ -13,12 +13,15 @@ public class CropInputs {
 	private Double tractorHour;
 	private Double agroTools;
 	
-	public CropInputs() {
+	public CropExpense() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	public CropInputs(String cropId, Double waterGallon, Double fertilizer, Double pesticides, Double tractorHour,
+	public CropExpense(String cropId) {
+	    super();
+	    this.cropId = cropId;
+	}
+	public CropExpense(String cropId, Double waterGallon, Double fertilizer, Double pesticides, Double tractorHour,
 			Double agroTools) {
 		super();
 		this.cropId = cropId;
@@ -29,7 +32,7 @@ public class CropInputs {
 		this.agroTools = agroTools;
 	}
 	
-	public CropInputs(FarmCropInputs farmCropInputs) {
+	public CropExpense(FarmCropInputs farmCropInputs) {
 	    super();
 	    this.cropId = farmCropInputs.getCropId();
 	    this.waterGallon = farmCropInputs.getWaterGallon();

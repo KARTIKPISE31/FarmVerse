@@ -654,3 +654,102 @@ h1, h2, h3, h4, h5, h6 {
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+
+/* ---------- Additional Expense & Crop Input Redesign Styles ---------- */
+.form-card-wrapper {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.form-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(46, 125, 50, 0.14);
+}
+
+.form-section-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--nn-dark);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon .input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--nn-primary);
+  font-size: 1.1rem;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.input-with-icon .form-control {
+  padding-left: 44px !important;
+}
+
+.amount-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 14px;
+  border-radius: var(--r-full);
+  background: rgba(46, 125, 50, 0.1);
+  color: var(--nn-primary);
+  font-weight: 800;
+  font-size: 0.95rem;
+  border: 1px solid rgba(46, 125, 50, 0.2);
+}
+
+.stat-card-clean {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(46, 125, 50, 0.15);
+  border-radius: var(--r-md);
+  padding: 20px 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card-clean:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--sh-md);
+}
+
+.detail-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(46, 125, 50, 0.08);
+}
+
+.detail-info-row:last-child {
+  border-bottom: none;
+}
+
+.detail-info-label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--nn-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detail-info-value {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--nn-dark);
+}
+

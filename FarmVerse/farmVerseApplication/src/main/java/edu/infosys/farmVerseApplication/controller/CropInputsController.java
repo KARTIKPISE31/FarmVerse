@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import edu.infosys.farmVerseApplication.bean.CropInputs;
 import edu.infosys.farmVerseApplication.bean.FarmCropInputs;
+import edu.infosys.farmVerseApplication.bean.FarmCropReport;
 import edu.infosys.farmVerseApplication.dao.CropInputsDao;
 import edu.infosys.farmVerseApplication.service.CropInputsService;
 
@@ -41,5 +42,15 @@ public class CropInputsController {
     public void deleteCropInputsById(@PathVariable String id) {
         cropInputsDao.deleteCropInputsById(id);
     }
+    
+//    @GetMapping("/crop-exp/{id}")
+//	public void expenseCalculation(@PathVariable String id) {
+//		service.expenseCalculation(id);
+//	}
+    
+    @GetMapping("/crop-exp/{id}")
+	public FarmCropReport expenseCalculation(@PathVariable String id) {
+		return service.expenseCalculation(id);
+	}
 
 }

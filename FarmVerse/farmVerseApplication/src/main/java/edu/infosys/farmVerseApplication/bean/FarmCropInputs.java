@@ -12,7 +12,7 @@ public class FarmCropInputs {
 	  private Double waterGallon;
 	  private Double fertilizer;
 	  private Double pesticides;
-	  private Integer tractorHour;
+	  private Double tractorHour;
 	  
 	  
 	  public FarmCropInputs() {
@@ -23,7 +23,7 @@ public class FarmCropInputs {
 	  
 	  public FarmCropInputs(String cropId, String cropName, Double cropArea, String soil, String sownMonthYear,
 			String harvestMonthYear, Double yield, Double waterGallon, Double fertilizer, Double pesticides,
-			Integer tractorHour) {
+			Double tractorHour) {
 		super();
 		this.cropId = cropId;
 		this.cropName = cropName;
@@ -50,7 +50,7 @@ public class FarmCropInputs {
 			this.waterGallon = 0.0;
 			this.fertilizer = 0.0;
 			this.pesticides = 0.0;
-			this.tractorHour = 0;
+			this.tractorHour = (double) 0;
 		  }
 	  
 	  
@@ -114,10 +114,10 @@ public class FarmCropInputs {
 	  public void setPesticides(Double pesticides) {
 		  this.pesticides = pesticides;
 	  }
-	  public Integer getTractorHour() {
+	  public Double getTractorHour() {
 		  return tractorHour;
 	  }
-	  public void setTractorHour(Integer tractorHour) {
+	  public void setTractorHour(Double tractorHour) {
 		  this.tractorHour = tractorHour;
 	  }
 	  
