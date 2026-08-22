@@ -46,6 +46,11 @@ const CropList = () => {
     String(crop.cropId).includes(searchTerm)
   );
 
+  // Return to dashboard
+  const returnBack = () => {
+      navigate("/farmer-menu");
+  };
+
   return (
     <div className="nn-scene">
       <span className="nn-cloud c1" />
@@ -174,22 +179,29 @@ const CropList = () => {
                           </Link>
                         </div>
                       </td>
-                      <td className="text-end pe-3">
-                        <button
-                          onClick={() => navigate(`/crop-input/${crop.cropId}`)}
-                          className="btn btn-outline-primary btn-sm px-3 me-2 fw-bold"
-                          style={{ borderRadius: "8px" }}
-                        >
-                          <i className="bi bi-journal-text me-1"></i> View Crop Inputs
-                        </button>
-                        <button
-                          onClick={() => removeCrop(crop.cropId)}
-                          className="btn btn-outline-danger btn-sm px-3 fw-bold"
-                          style={{ borderRadius: "8px" }}
-                        >
-                          <i className="bi bi-trash3 me-1"></i> Delete
-                        </button>
-                      </td>
+                          <td className="text-end pe-3">
+                            <button
+                              onClick={() => navigate(`/crop-input/${crop.cropId}`)}
+                              className="btn btn-outline-primary btn-sm px-3 me-2 fw-bold"
+                              style={{ borderRadius: "8px" }}
+                            >
+                              <i className="bi bi-journal-text me-1"></i> View Crop Inputs
+                            </button>
+                            <button
+                              onClick={() => navigate(`/farm-crop-expense/${crop.cropId}`)}
+                              className="btn btn-outline-success btn-sm px-3 me-2 fw-bold"
+                              style={{ borderRadius: "8px" }}
+                            >
+                              <i className="bi bi-cash-coin me-1"></i> Crop Expense Report
+                            </button>
+                            <button
+                              onClick={() => removeCrop(crop.cropId)}
+                              className="btn btn-outline-danger btn-sm px-3 fw-bold"
+                              style={{ borderRadius: "8px" }}
+                            >
+                              <i className="bi bi-trash3 me-1"></i> Delete
+                            </button>
+                          </td>
                     </tr>
                   ))
                 ) : (
