@@ -35,7 +35,7 @@ public class AgroExpenseController {
         return agroExpenseDao.getAgroExpenseById(id);
     }
 
-    @GetMapping("/exp")
+    @GetMapping({"/exp", "/agroexpense"})
     public List<AgroExpense> getAllAgroExpenses() {
         return agroExpenseDao.getAllAgroExpenses();
     }
